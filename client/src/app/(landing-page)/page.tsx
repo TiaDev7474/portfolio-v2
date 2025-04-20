@@ -8,7 +8,7 @@ export default function LandingPage() {
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h2 className="text-sm md:text-lg font-medium text-center">Hi! I am Riry 🇲🇬 <span className="text-accent-gold font-bold">Software Developer | Mobile & Web App Specialist </span></h2>
                         <h1 className="text-text-black text-3xl font-bold md:text-6xl text-center">Welcome to my personal website</h1>
-                        <p className="text-text-gray">Currently under development. Stay tuned for exciting updates!</p>
+                        <p className="text-text-gray text-sm text-center">Currently under development. Stay tuned for exciting updates!</p>
                     </div>
                     <button className="btn">
                         Schedule a CALL
