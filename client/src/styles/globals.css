@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #A4161A;
+    --primary-light: #F4DADA;
+    --primary-dark: #700B0F;
+    --accent-gold: #D4AF37;
+    --accent-slate: #4B5563;
+    --background: hsla(0, 0%, 97%, 1);
+    --text-gray: hsla(300, 1%, 38%, 1);
+    --text-black: hsla(16, 23%, 9%, 1); ;
+  }
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-text-gray: var(--text-gray);
+  --color-text-black: var(--text-black);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-slate: var(--accent-slate);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #A4161A;
+    --primary-light: #803638;
+    --primary-dark: #470204;
+    --accent-gold: #FFD700;
+    --accent-slate: #9CA3AF;
+    --bg-light: #2a2a2a;
+    --background: #121212;
+  }
+}
+
+
+@layer  components {
+  .btn {
+    @apply bg-primary text-white py-4 px-8 rounded-full font-bold cursor-pointer transition-all duration-300 ease-in-out;
+    &:hover {
+      @apply transform scale-105 bg-primary;
+    }
+    @variant dark {
+      @apply bg-primary-light;
+      &:hover {
+        @apply bg-primary-light;
+      }
+    }
+  }
+}
+
+body {
+  background: var(--color-white);
+  color: var(--text-black);
+  font-family: Arial, Helvetica, sans-serif;
+}
